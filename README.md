@@ -10,9 +10,10 @@ have installed
 - python3
 - pip
 
-Personally, I recommend also using miniconda (or some other environment
-management tool). If you do not manage environments, you may get unexpected
-results.
+Personally, I recommend also using
+[miniconda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html#)
+(or some other environment management tool). If you do not manage environments,
+you may get unexpected results.
 
 I setup as follows:
 
