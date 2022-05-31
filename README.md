@@ -38,6 +38,20 @@ When you want to clean up
     conda remove -n bky-ll --all
 	make veryclean
 
+## Your task
+
+Create a function that takes as input a link list _L_ and returns linked list in
+which the data entries of _L_ occur in the reverse order.  The input linked list
+should not be modified.  Once you have successfully created this function, issue
+a PR.
+
+Your goal is to not only to get your code working, but do so in a way that it is
+not painful for other developers to work with your code going forward
+
+If you have any questions or run into any problems, feel free to reach out to
+us via email.
+
+Good luck!!
 
 ## Acknowledgements
 
