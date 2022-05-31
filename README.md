@@ -7,12 +7,14 @@ This repo is a basic shell for a python project for Blocky code tests.
 I assume that you are working on a unix based system such as OS X or Ubuntu and
 have installed
 
-- mini conda
+- python3
+- pip
 
-You do not need miniconda but as is common when working with python, if you
-do not manage your environments, you may get unexpected results.
+Personally, I recommend also using miniconda (or some other environment
+management tool). If you do not manage environments, you may get unexpected
+results.
 
-I recommend setting up an environment with conda and install pip
+I setup as follows:
 
 	conda create --name bky-ll python=3.10 pip
 
