@@ -43,3 +43,44 @@ def test_LinkedList_str():
     lst.add('n0')
     lst.add('n1')
     assert str(lst) == "n1 -> n0 -> None"
+
+
+def test_reverse_linked_list():
+    lst = ll.LinkedList()
+    lst.add('n0')
+    lst.add('n1')
+    lst.add('n2')
+
+    reversed_list = ll.reverse_linked_list(lst)
+
+    # check the original list has not been modified
+    n = lst.head
+    assert n is not None
+    assert n.data == "n2"
+    n = n.succ
+    assert n is not None
+    assert n.data == "n1"
+    n = n.succ
+    assert n is not None
+    assert n.data == "n0"
+    assert n.succ is None
+
+    # confirm the reversed list is ordered as expected
+    n = reversed_list.head
+    assert n is not None
+    assert n.data == "n0"
+    n = n.succ
+    assert n is not None
+    assert n.data == "n1"
+    n = n.succ
+    assert n is not None
+    assert n.data == "n2"
+    assert n.succ is None
+
+
+def test_reverse_empty_linked_list():
+    lst = ll.LinkedList()
+    reversed_list = ll.reverse_linked_list(lst)
+
+    assert lst.head is None
+    assert reversed_list.head is None

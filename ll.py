@@ -23,3 +23,15 @@ class LinkedList:
             current = current.succ
         string += "None"
         return string
+
+
+def reverse_linked_list(lst: LinkedList) -> LinkedList:
+    reversed_list = LinkedList()
+    if lst.head is None:
+        # handle empty list case
+        return reversed_list
+    current = lst.head
+    while current is not None:
+        reversed_list.add(current.data)
+        current = current.succ
+    return reversed_list
