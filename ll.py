@@ -27,20 +27,20 @@ class LinkedList:
         string += "None"
         return string
 
+    @staticmethod
+    def reverse_linked_list(lst):
+        """
+        Returns a new list with reversed list elements of input list.
 
-def reverse_linked_list(lst: LinkedList) -> LinkedList:
-    """
-    Returns a new list with reversed list elements of input list.
-
-    This method assumes the linked list input is acyclic.
-    """
-    reversed_list = LinkedList()
-    if lst.head is None:
-        # handle empty list case
+        This method assumes the linked list input is acyclic.
+        """
+        reversed_list = LinkedList()
+        if lst.head is None:
+            # handle empty list case
+            return reversed_list
+        current = lst.head
+        # traverse the list until the next node is None (end of list)
+        while current is not None:
+            reversed_list.add(current.data)
+            current = current.succ
         return reversed_list
-    current = lst.head
-    # traverse the list until the next node is None (end of list)
-    while current is not None:
-        reversed_list.add(current.data)
-        current = current.succ
-    return reversed_list
