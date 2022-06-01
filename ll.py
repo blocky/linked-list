@@ -1,5 +1,8 @@
+from __future__ import annotations
+
+
 class Node:
-    def __init__(self, data, successor):
+    def __init__(self, data, successor: Node):
         self.data = data
         self.succ = successor
 
@@ -12,7 +15,7 @@ class LinkedList:
         self.head = None
         self.string = "None"
 
-    def add(self, data):
+    def add(self, data) -> None:
         """
         Add element to the front of the list
         """
@@ -28,7 +31,7 @@ class LinkedList:
         return string
 
     @staticmethod
-    def reverse_linked_list(lst):
+    def reverse_linked_list(lst: LinkedList) -> LinkedList:
         """
         Returns a new list with reversed list elements of input list.
 
