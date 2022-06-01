@@ -12,6 +12,11 @@ def test_Node_init():
     assert n1.succ is None
 
 
+def test_Node_str():
+    n1 = ll.Node('n1', None)
+    assert str(n1) == 'n1'
+
+
 def test_LinkedList_add():
     lst = ll.LinkedList()
     lst.add('n0')
@@ -31,3 +36,10 @@ def test_LinkedList_head_when_empty():
     lst = ll.LinkedList()
     n = lst.head
     assert n is None
+
+
+def test_LinkedList_str():
+    lst = ll.LinkedList()
+    lst.add('n0')
+    lst.add('n1')
+    assert str(lst) == "n1 -> n0 -> None"
