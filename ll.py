@@ -3,7 +3,7 @@ class Node:
         self.data = data
         self.succ = successor
 
-    def __str__(self):
+    def __str__(self) -> str:
         return str(self.data)
 
 
@@ -13,9 +13,12 @@ class LinkedList:
         self.string = "None"
 
     def add(self, data):
+        """
+        Add element to the front of the list
+        """
         self.head = Node(data, self.head)
 
-    def __str__(self):
+    def __str__(self) -> str:
         string = ""
         current = self.head
         while current is not None:
@@ -26,11 +29,17 @@ class LinkedList:
 
 
 def reverse_linked_list(lst: LinkedList) -> LinkedList:
+    """
+    Returns a new list with reversed list elements of input list.
+
+    This method assumes the linked list input is acyclic.
+    """
     reversed_list = LinkedList()
     if lst.head is None:
         # handle empty list case
         return reversed_list
     current = lst.head
+    # traverse the list until the next node is None (end of list)
     while current is not None:
         reversed_list.add(current.data)
         current = current.succ
